@@ -29,7 +29,7 @@ int main() {
                         std::vector<int> myVector(dataStructureSize);
                         while (true) {
                             std::string operation;
-                            std::cout << "Input operation you would like to do: add/delete/print!" << std::endl;
+                            std::cout << "Input operation you would like to do: add/delete/print/represent!" << std::endl;
                             std::cin >> operation;
                             if (operation == "add") {
                                 int number;
@@ -60,8 +60,12 @@ int main() {
                                 } else {
                                     std::cout << "The index is out of bounds of the vector" << std::endl;
                                 }
-                            } else {
-                                std::cout << "There is no this command" << std::endl;
+                            } else if (operation == "represent") {
+                                std::cout << "Here is your vector<int>: \n";
+                                for (std::size_t i = 0; i < myVector.size(); i++) {
+                                    std::cout << myVector[i] << ' ';
+                                }
+                                std::cout << '\n';
                             }
 
                             std::cout << "One more operation with this container? Input yes/no" << std::endl;
@@ -88,6 +92,12 @@ int main() {
                                 } else {
                                     std::cout << "Size of myVector is overflow!" << std::endl;
                                 }
+                            } else if (operation == "represent") {
+                                std::cout << "Here is your vector<double>: \n";
+                                for (std::size_t i = 0; i < myVector.size(); i++) {
+                                    std::cout << myVector[i] << ' ';
+                                }
+                                std::cout << '\n';
                             } else if (operation == "delete") {
                                 int delIndex;
                                 std::cout << "Input number index of vector you would like to delete" << std::endl;
@@ -153,6 +163,12 @@ int main() {
                                 } else {
                                     std::cout << "The index is out of bounds of the vector" << std::endl;
                                 }
+                            } else if (operation == "represent") {
+                                std::cout << "Here is your vector<float>: \n";
+                                for (std::size_t i = 0; i < myVector.size(); i++) {
+                                    std::cout << myVector[i] << ' ';
+                                }
+                                std::cout << '\n';
                             } else {
                                 std::cout << "There is no this command" << std::endl;
                             }
@@ -200,6 +216,12 @@ int main() {
                                 } else {
                                     std::cout << "The index is out of bounds of the vector" << std::endl;
                                 }
+                            } else if (operation == "represent") {
+                                std::cout << "Here is your vector<char>: \n";
+                                for (std::size_t i = 0; i < myVector.size(); i++) {
+                                    std::cout << myVector[i] << ' ';
+                                }
+                                std::cout << '\n';
                             } else {
                                 std::cout << "There is no this command" << std::endl;
                             }
@@ -248,7 +270,13 @@ int main() {
                                 } else {
                                     std::cout << "The index is out of bounds of the vector" << std::endl;
                                 }
-                            } else {
+                            } else if (operation == "represent") {
+                                std::cout << "Here is your vector<string>: \n";
+                                for (std::size_t i = 0; i < myVector.size(); i++) {
+                                    std::cout << myVector[i] << ' ';
+                                }
+                                std::cout << '\n';
+                            } else  {
                                 std::cout << "There is no this command" << std::endl;
                             }
 
@@ -271,7 +299,7 @@ int main() {
 
                         while (true) {
                             std::string operation;
-                            std::cout << "Input operation you would like to do: add/delete/print!" << std::endl;
+                            std::cout << "Input operation you would like to do: add/delete/print/represent!" << std::endl;
                             std::cin >> operation;
                             
                             if (operation == "add") {
@@ -315,6 +343,14 @@ int main() {
                                     }
                                 } else {
                                     std::cout << "The first index is out of bounds of the vector<vector<int>>" << std::endl;
+                                }
+                            } else if (operation == "represent") {
+                                std::cout << "Here is your vector<vector<int>>: \n";
+                                for (std::size_t i = 0; i < myVector.size(); i++) {
+                                    for (std::size_t j = 0; j < myVector.size(); j++) {
+                                        std::cout << myVector[i][j] << ' ';
+                                    }
+                                    std::cout << '\n';
                                 }
                             } else {
                                 std::cout << "There is no this command" << std::endl;
@@ -380,6 +416,14 @@ int main() {
                                 } else {
                                     std::cout << "The first index is out of bounds of the vector<vector<double>>" << std::endl;
                                 }
+                            } else if (operation == "represent") {
+                                std::cout << "Here is your vector<vector<double>>: \n";
+                                for (std::size_t i = 0; i < myVector.size(); i++) {
+                                    for (std::size_t j = 0; j < myVector.size(); j++) {
+                                        std::cout << myVector[i][j] << ' ';
+                                    }
+                                    std::cout << '\n';
+                                }
                             } else {
                                 std::cout << "There is no this command" << std::endl;
                             }
@@ -442,6 +486,14 @@ int main() {
                                     }
                                 } else {
                                     std::cout << "The first index is out of bounds of the vector<vector<float>>" << std::endl;
+                                }
+                            } else if (operation == "represent") {
+                                std::cout << "Here is your vector<vector<float>>: \n";
+                                for (std::size_t i = 0; i < myVector.size(); i++) {
+                                    for (std::size_t j = 0; j < myVector.size(); j++) {
+                                        std::cout << myVector[i][j] << ' ';
+                                    }
+                                    std::cout << '\n';
                                 }
                             } else {
                                 std::cout << "There is no this command" << std::endl;
@@ -506,6 +558,14 @@ int main() {
                                 } else {
                                     std::cout << "The first index is out of bounds of the vector<vector<char>>" << std::endl;
                                 }
+                            } else if (operation == "represent") {
+                                std::cout << "Here is your vector<vector<char>>: \n";
+                                for (std::size_t i = 0; i < myVector.size(); i++) {
+                                    for (std::size_t j = 0; j < myVector.size(); j++) {
+                                        std::cout << myVector[i][j] << ' ';
+                                    }
+                                    std::cout << '\n';
+                                }
                             } else {
                                 std::cout << "There is no this command" << std::endl;
                             }
@@ -569,6 +629,14 @@ int main() {
                                 } else {
                                     std::cout << "The first index is out of bounds of the vector<vector<string>>" << std::endl;
                                 }
+                            } else if (operation == "represent") {
+                                std::cout << "Here is your vector<vector<std::string>>: \n";
+                                for (std::size_t i = 0; i < myVector.size(); i++) {
+                                    for (std::size_t j = 0; j < myVector.size(); j++) {
+                                        std::cout << myVector[i][j] << ' ';
+                                    }
+                                    std::cout << '\n';
+                                }
                             } else {
                                 std::cout << "There is no this command" << std::endl;
                             }
@@ -592,7 +660,7 @@ int main() {
                         }
                         while (true) {
                             std::string operation;
-                            std::cout << "Input operation you would like to do: add/delete/print!" << std::endl;
+                            std::cout << "Input operation you would like to do: add/delete/print/represent!" << std::endl;
                             std::cin >> operation;
                             
                             if (operation == "add") {
@@ -648,6 +716,17 @@ int main() {
                                     }
                                 } else {
                                     std::cout << "The first index is out of bounds of the vector<vector<int>>" << std::endl;
+                                }
+                            } else if (operation == "represent") {
+                                std::cout << "Here is your vector<vector<vector<int>>>: \n";
+                                for (std::size_t k = 0; k < myVector.size(); k++) {
+                                    for (std::size_t i = 0; i < myVector.size(); i++) {
+                                        for (std::size_t j = 0; j < myVector.size(); j++) {
+                                            std::cout << myVector[i][j][k] << ' ';
+                                        }
+                                        std::cout << '\n';
+                                    }
+                                    std::cout << '\n' << '\n';
                                 }
                             } else {
                                 std::cout << "There is no this command" << std::endl;
@@ -726,6 +805,17 @@ int main() {
                                 } else {
                                     std::cout << "The first index is out of bounds of the vector<vector<int>>" << std::endl;
                                 }
+                            } else if (operation == "represent") {
+                                std::cout << "Here is your vector<vector<vector<double>>>: \n";
+                                for (std::size_t k = 0; k < myVector.size(); k++) {
+                                    for (std::size_t i = 0; i < myVector.size(); i++) {
+                                        for (std::size_t j = 0; j < myVector.size(); j++) {
+                                            std::cout << myVector[i][j][k] << ' ';
+                                        }
+                                        std::cout << '\n';
+                                    }
+                                    std::cout << '\n' << '\n';
+                                }
                             } else {
                                 std::cout << "There is no this command" << std::endl;
                             }
@@ -783,7 +873,7 @@ int main() {
                                         std::cout << "The second index is out of bounds of the vector<vector<vector<int>>>" << std::endl;
                                     }
                                     
-                                } else {
+                                }  else {
                                     std::cout << "The first index is out of bounds of the vector" << std::endl;
                                 }
                             } else if (operation == "print") {
@@ -803,7 +893,18 @@ int main() {
                                 } else {
                                     std::cout << "The first index is out of bounds of the vector<vector<int>>" << std::endl;
                                 }
-                            } else {
+                            } else if (operation == "represent") {
+                                    std::cout << "Here is your vector<vector<vector<float>>>: \n";
+                                    for (std::size_t k = 0; k < myVector.size(); k++) {
+                                        for (std::size_t i = 0; i < myVector.size(); i++) {
+                                            for (std::size_t j = 0; j < myVector.size(); j++) {
+                                                std::cout << myVector[i][j][k] << ' ';
+                                            }
+                                            std::cout << '\n';
+                                        }
+                                        std::cout << '\n' << '\n';
+                                    }
+                                } else {
                                 std::cout << "There is no this command" << std::endl;
                             }
 
@@ -880,7 +981,18 @@ int main() {
                                 } else {
                                     std::cout << "The first index is out of bounds of the vector<vector<char>>" << std::endl;
                                 }
-                            } else {
+                            } else if (operation == "represent") {
+                                    std::cout << "Here is your vector<vector<vector<char>>>: \n";
+                                    for (std::size_t k = 0; k < myVector.size(); k++) {
+                                        for (std::size_t i = 0; i < myVector.size(); i++) {
+                                            for (std::size_t j = 0; j < myVector.size(); j++) {
+                                                std::cout << myVector[i][j][k] << ' ';
+                                            }
+                                            std::cout << '\n';
+                                        }
+                                        std::cout << '\n' << '\n';
+                                    }
+                                } else {
                                 std::cout << "There is no this command" << std::endl;
                             }
 
@@ -937,7 +1049,7 @@ int main() {
                                         std::cout << "The second index is out of bounds of the vector<vector<vector<string>>>" << std::endl;
                                     }
                                     
-                                } else {
+                                }  else {
                                     std::cout << "The first index is out of bounds of the vector" << std::endl;
                                 }
                             } else if (operation == "print") {
@@ -957,7 +1069,18 @@ int main() {
                                 } else {
                                     std::cout << "The first index is out of bounds of the vector<vector<string>>" << std::endl;
                                 }
-                            } else {
+                            } else if (operation == "represent") {
+                                    std::cout << "Here is your vector<vector<vector<std::string>>>: \n";
+                                    for (std::size_t k = 0; k < myVector.size(); k++) {
+                                        for (std::size_t i = 0; i < myVector.size(); i++) {
+                                            for (std::size_t j = 0; j < myVector.size(); j++) {
+                                                std::cout << myVector[i][j][k] << ' ';
+                                            }
+                                            std::cout << '\n';
+                                        }
+                                        std::cout << '\n' << '\n';
+                                    }
+                                } else {
                                 std::cout << "There is no this command" << std::endl;
                             }
 
@@ -977,7 +1100,7 @@ int main() {
                     std::set<int>::iterator it = mySet.begin();
                     while (true) {
                         std::string operation;
-                        std::cout << "Input operation you would like to do: add/delete/print!" << std::endl;
+                        std::cout << "Input operation you would like to do: add/delete/print/represent!" << std::endl;
                         std::cin >> operation;
                         if (operation == "add") {
                             int number;
@@ -1005,7 +1128,15 @@ int main() {
                             } else {
                                 std::cout << "The index is out of bounds of the set" << std::endl;
                             }
-                        } else {
+                        } else if (operation == "represent") {
+                                auto itPresent = mySet.begin();
+                                std::cout << "Here is your set<int>: \n";
+                                while (itPresent != mySet.end()) {
+                                    std::cout << *itPresent << ' ';
+                                    itPresent++;
+                                } 
+                                std::cout << '\n';
+                            } else {
                             std::cout << "There is no this command" << std::endl;
                         }
 
@@ -1019,7 +1150,7 @@ int main() {
                     std::set<double>::iterator it = mySet.begin();
                     while (true) {
                         std::string operation;
-                        std::cout << "Input operation you would like to do: add/delete/print!" << std::endl;
+                        std::cout << "Input operation you would like to do: add/delete/print/represent!" << std::endl;
                         std::cin >> operation;
                         if (operation == "add") {
                             double number;
@@ -1047,6 +1178,14 @@ int main() {
                             } else {
                                 std::cout << "The index is out of bounds of the set" << std::endl;
                             }
+                        } else if (operation == "represent") {
+                                auto itPresent = mySet.begin();
+                                std::cout << "Here is your set<double>: \n";
+                                while (itPresent != mySet.end()) {
+                                    std::cout << *itPresent << ' ';
+                                    itPresent++;
+                                } 
+                                std::cout << '\n';
                         } else {
                             std::cout << "There is no this command" << std::endl;
                         }
@@ -1062,7 +1201,7 @@ int main() {
                     std::set<float>::iterator it = mySet.begin();
                     while (true) {
                         std::string operation;
-                        std::cout << "Input operation you would like to do: add/delete/print!" << std::endl;
+                        std::cout << "Input operation you would like to do: add/delete/print/represent!" << std::endl;
                         std::cin >> operation;
                         if (operation == "add") {
                             float number;
@@ -1090,6 +1229,14 @@ int main() {
                             } else {
                                 std::cout << "The index is out of bounds of the set" << std::endl;
                             }
+                        } else if (operation == "represent") {
+                                auto itPresent = mySet.begin();
+                                std::cout << "Here is your set<float>: \n";
+                                while (itPresent != mySet.end()) {
+                                    std::cout << *itPresent << ' ';
+                                    itPresent++;
+                                } 
+                                std::cout << '\n';
                         } else {
                             std::cout << "There is no this command" << std::endl;
                         }
@@ -1104,7 +1251,7 @@ int main() {
                     std::set<std::string>::iterator it = mySet.begin();
                     while (true) {
                         std::string operation;
-                        std::cout << "Input operation you would like to do: add/delete/print!" << std::endl;
+                        std::cout << "Input operation you would like to do: add/delete/print/represent!" << std::endl;
                         std::cin >> operation;
                         if (operation == "add") {
                             std::string string;
@@ -1132,6 +1279,14 @@ int main() {
                             } else {
                                 std::cout << "The index is out of bounds of the set" << std::endl;
                             }
+                        } else if (operation == "represent") {
+                                auto itPresent = mySet.begin();
+                                std::cout << "Here is your set<std::string>: \n";
+                                while (itPresent != mySet.end()) {
+                                    std::cout << *itPresent << ' ';
+                                    itPresent++;
+                                } 
+                                std::cout << '\n';
                         } else {
                             std::cout << "There is no this command" << std::endl;
                         }
@@ -1146,7 +1301,7 @@ int main() {
                     std::set<char>::iterator it = mySet.begin();
                     while (true) {
                         std::string operation;
-                        std::cout << "Input operation you would like to do: add/delete/print!" << std::endl;
+                        std::cout << "Input operation you would like to do: add/delete/print/represent!" << std::endl;
                         std::cin >> operation;
                         if (operation == "add") {
                             char symbol;
@@ -1174,6 +1329,14 @@ int main() {
                             } else {
                                 std::cout << "The index is out of bounds of the set" << std::endl;
                             }
+                        } else if (operation == "represent") {
+                                auto itPresent = mySet.begin();
+                                std::cout << "Here is your set<char>: \n";
+                                while (itPresent != mySet.end()) {
+                                    std::cout << *itPresent << ' ';
+                                    itPresent++;
+                                } 
+                                std::cout << '\n';
                         } else {
                             std::cout << "There is no this command" << std::endl;
                         }
@@ -1189,7 +1352,7 @@ int main() {
                     std::map<int, int>::const_iterator addIt = myMap.begin();
                     while (true) {
                         std::string operation;
-                        std::cout << "Input operation you would like to do: add/delete/print!" << std::endl;
+                        std::cout << "Input operation you would like to do: add/delete/print/represent!" << std::endl;
                         std::cin >> operation;
 
                         if (operation == "add") {
@@ -1237,6 +1400,13 @@ int main() {
                             if (!isPrinted) {
                                 std::cout << "The index is out of bounds of the map" << std::endl;
                             }
+                        } else if (operation == "represent") {
+                                auto itPresent = myMap.begin();
+                                std::cout << "Here is your std::map<int>: \n";
+                                while (itPresent != myMap.end()) {
+                                    std::cout << itPresent->first << ' ' << itPresent->second << '\n';
+                                    itPresent++;
+                                } 
                         } else {
                             std::cout << "There is no this command" << std::endl;
                         }
@@ -1252,7 +1422,7 @@ int main() {
                     std::map<double, double>::const_iterator addIt = myMap.begin();
                     while (true) {
                         std::string operation;
-                        std::cout << "Input operation you would like to do: add/delete/print!" << std::endl;
+                        std::cout << "Input operation you would like to do: add/delete/print/represent!" << std::endl;
                         std::cin >> operation;
 
                         if (operation == "add") {
@@ -1300,6 +1470,13 @@ int main() {
                             if (!isPrinted) {
                                 std::cout << "The index is out of bounds of the map" << std::endl;
                             }
+                        }else if (operation == "represent") {
+                                auto itPresent = myMap.begin();
+                                std::cout << "Here is your std::map<double>: \n";
+                                while (itPresent != myMap.end()) {
+                                    std::cout << itPresent->first << ' ' << itPresent->second << '\n';
+                                    itPresent++;
+                                } 
                         } else {
                             std::cout << "There is no this command" << std::endl;
                         }
@@ -1314,7 +1491,7 @@ int main() {
                     std::map<float, float>::const_iterator addIt = myMap.begin();
                     while (true) {
                         std::string operation;
-                        std::cout << "Input operation you would like to do: add/delete/print!" << std::endl;
+                        std::cout << "Input operation you would like to do: add/delete/print/represent!" << std::endl;
                         std::cin >> operation;
 
                         if (operation == "add") {
@@ -1362,6 +1539,13 @@ int main() {
                             if (!isPrinted) {
                                 std::cout << "The index is out of bounds of the map" << std::endl;
                             }
+                        } else if (operation == "represent") {
+                            auto itPresent = myMap.begin();
+                            std::cout << "Here is your std::map<float>: \n";
+                            while (itPresent != myMap.end()) {
+                                std::cout << itPresent->first << ' ' << itPresent->second << '\n';
+                                itPresent++;
+                            } 
                         } else {
                             std::cout << "There is no this command" << std::endl;
                         }
@@ -1376,7 +1560,7 @@ int main() {
                     std::map<std::string, std::string>::const_iterator addIt = myMap.begin();
                     while (true) {
                         std::string operation;
-                        std::cout << "Input operation you would like to do: add/delete/print!" << std::endl;
+                        std::cout << "Input operation you would like to do: add/delete/print/represent!" << std::endl;
                         std::cin >> operation;
 
                         if (operation == "add") {
@@ -1424,6 +1608,13 @@ int main() {
                             if (!isPrinted) {
                                 std::cout << "The index is out of bounds of the map" << std::endl;
                             }
+                        } else if (operation == "represent") {
+                                auto itPresent = myMap.begin();
+                                std::cout << "Here is your std::map<std::string>: \n";
+                                while (itPresent != myMap.end()) {
+                                    std::cout << itPresent->first << ' ' << itPresent->second << '\n';
+                                    itPresent++;
+                                } 
                         } else {
                             std::cout << "There is no this command" << std::endl;
                         }
@@ -1438,7 +1629,7 @@ int main() {
                     std::map<char, char>::const_iterator addIt = myMap.begin();
                     while (true) {
                         std::string operation;
-                        std::cout << "Input operation you would like to do: add/delete/print!" << std::endl;
+                        std::cout << "Input operation you would like to do: add/delete/print/represent!" << std::endl;
                         std::cin >> operation;
 
                         if (operation == "add") {
@@ -1486,6 +1677,13 @@ int main() {
                             if (!isPrinted) {
                                 std::cout << "The index is out of bounds of the map" << std::endl;
                             }
+                        } else if (operation == "represent") {
+                                auto itPresent = myMap.begin();
+                                std::cout << "Here is your std::map<char>: \n";
+                                while (itPresent != myMap.end()) {
+                                    std::cout << itPresent->first << ' ' << itPresent->second << '\n';
+                                    itPresent++;
+                                } 
                         } else {
                             std::cout << "There is no this command" << std::endl;
                         }
