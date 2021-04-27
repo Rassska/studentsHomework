@@ -20,6 +20,7 @@ int main() {
 
     try
     {
+        getLnOfInteger(number);
         std::cout << "Here is ln(" << number << "): " << getLnOfInteger(number) << '\n';
     }
     catch(const myException& exp)
