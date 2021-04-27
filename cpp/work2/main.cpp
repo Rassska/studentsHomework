@@ -2,6 +2,12 @@
 #include <vector>
 #include <fstream>
 
+/*
+*   author: Rasul Yunusov
+*   Vk: https://vk.com/yunusov_rasul
+*   Telegram: @Road220
+*   email: rasuldag220@gmail.com
+*/
 
 struct node {
     node* nextPointer;
