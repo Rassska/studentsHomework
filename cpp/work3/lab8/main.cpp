@@ -37,6 +37,7 @@ double getLnOfInteger(int givenNumber) {
 
 int main() {
 
+    std::cout << "Input your log argument!\n";
     int number;
     std::cin >> number;
 
