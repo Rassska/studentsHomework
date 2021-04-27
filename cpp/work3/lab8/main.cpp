@@ -1,7 +1,28 @@
 #include <iostream>
-#include "myException.h"
 #include <stdexcept>
 #include <cmath>
+#include <exception>
+
+class myException : public std::exception {
+private:
+    std::string m_msg;
+    int m_inputNumberState;
+
+public:
+
+    myException(std::string msg, int inputNumberState):
+        m_msg(msg), m_inputNumberState(inputNumberState) {}
+
+    std::string getMsg() const{
+        return this->m_msg;
+    }
+
+    int getInputNumberState() const {
+        return this->m_inputNumberState;
+    }
+
+    ~myException() = default;
+};
 
 double getLnOfInteger(int givenNumber) {
     if (givenNumber < 0) {
@@ -12,6 +33,7 @@ double getLnOfInteger(int givenNumber) {
         return log(givenNumber);
     }
 }
+
 
 int main() {
 
