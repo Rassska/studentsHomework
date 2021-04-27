@@ -72,10 +72,10 @@ public:
 class D_Student : public non_stipendStudents
 {
 private:
-    std::vector<std::string> m_academicDebts;
+    std::vector<std::size_t> m_academicDebts;
 public:
     D_Student()= default;
-    std::vector<std::string> getAcademicDebts() const {
+    std::vector<std::size_t> getAcademicDebts() const {
         return m_academicDebts;
     }
     ~D_Student()= default;
@@ -114,7 +114,7 @@ public:
 
             if (D_Student* tempDNonStipendStudent = dynamic_cast<D_Student*>(currBase->getAllStudents()[i])) { // Если это неуспевающий студент
                 if (tempDNonStipendStudent->getAcademicDebts().size() <= 3) {
-                    tempDNonStipendStudent->getAcademicDebts().push_back(std::to_string(std::time(nullptr))); // Добавляем в список дату для пересдач с вектор, содержащий все даты передач, только 3 разрешены!
+                    tempDNonStipendStudent->getAcademicDebts().push_back(std::time(nullptr)); // Добавляем в список дату для пересдач с вектор, содержащий все даты передач, только 3 разрешены!
                 } else {
                     std::cout << "Student has more than 3 attempt to pass exam!\n";
                     currBase->removeStudentFromBase(i); // Отчисляем студента :(
@@ -154,7 +154,7 @@ int main() {
 
     currDeanOffice->createReport(allStudentsDataBase); 
     
-    
+
 
     
 
