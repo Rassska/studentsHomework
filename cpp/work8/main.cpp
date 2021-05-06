@@ -38,7 +38,7 @@ signed main()
         int u, v, weight; // input from/to/weight of curr edge
         cin >> u >> v >> weight;
         u--;
-        v--;
+	v--;
         edges[i].first = weight;
         edges[i].second.first = u;
         edges[i].second.second = v;
@@ -88,7 +88,7 @@ signed main()
         }
  
         if (d[i] != maxen) {
-            cout << d[i] << '\n';
+            cout << "For the node number: " << i + 1 << " here is shortest distance: "<< d[i] << '\n';
         } else {
             cout << '*' << '\n';
         }
