@@ -1,5 +1,11 @@
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <cstring>
+#include <climits>
+
 using namespace std;
 const int N = 4;
   
