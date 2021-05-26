@@ -1,5 +1,4 @@
-// C++ program to solve Traveling Salesman Problem
-// using Branch and Bound.
+
 #include <bits/stdc++.h>
 using namespace std;
 const int N = 4;
